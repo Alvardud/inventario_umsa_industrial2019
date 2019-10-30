@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "71842219334",
+    "firebase_url": "https://umsa-industrial.firebaseio.com",
+    "project_id": "umsa-industrial",
+    "storage_bucket": "umsa-industrial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71842219334:android:ac24fab00f4dad8a7e5147",
+        "android_client_info": {
+          "package_name": "com.example.inventario_umsa_industrial2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71842219334-d6gf9un5s7arfrtrd5homf4msp9gfhpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inventario_umsa_industrial2019",
+            "certificate_hash": "4f9175cc9760a66f5acaec65c6a9cdc18a8f2843"
+          }
+        },
+        {
+          "client_id": "71842219334-gr34oq9h45bdp5iv8ppakvg64o57kd35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCArh-vwfKedrNQCpLZuLLDtuzq-ZWDIkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71842219334-gr34oq9h45bdp5iv8ppakvg64o57kd35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
