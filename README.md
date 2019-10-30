@@ -1,0 +1,1 @@
+# inventario_umsa_industrial2019
