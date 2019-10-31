@@ -39,11 +39,15 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.inventario_umsa_industrial2019"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dependencies {
+      implementation 'com.android.support:multidex:1.0.3'
     }
 
     buildTypes {
