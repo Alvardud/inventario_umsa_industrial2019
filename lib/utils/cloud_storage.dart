@@ -1,10 +1,11 @@
 import 'package:firebase_storage/firebase_storage.dart';
 
+StorageReference ref;
+
 Future<String> getImagePathInsume({String name}) async {
   try {
-    final ref = FirebaseStorage.instance.ref().child('gs://umsa-industrial.appspot.com/insumos/$name');
-    var url = await ref.getDownloadURL() as String;
-    print(url);
+    ref = FirebaseStorage.instance.ref().child('insumos').child(name);
+    var url = await ref.getDownloadURL();
     return url;
   } catch (e) {
     print(e);

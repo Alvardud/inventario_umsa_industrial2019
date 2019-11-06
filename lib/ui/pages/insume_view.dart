@@ -8,7 +8,8 @@ import 'package:inventario_umsa_industrial2019/utils/cloud_storage.dart'
 import 'package:inventario_umsa_industrial2019/utils/firebase_request.dart'
     as firebase;
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:inventario_umsa_industrial2019/utils/generate_image.dart'as image;
+import 'package:inventario_umsa_industrial2019/utils/generate_image.dart'
+    as image;
 
 class InsumesView extends StatefulWidget {
   final Insumos insumo;
@@ -128,21 +129,33 @@ class Descripcion extends StatelessWidget {
   Descripcion({this.insumo});
 
   Widget _image() {
-    return Container(
-      height: 150.0,
-      width: 150.0,
-      child: FutureBuilder(
-        future: cloud.getImagePathInsume(name: "${insumo.id}.jpg"),
-        builder: (BuildContext context, AsyncSnapshot snap) {
-          if (!snap.hasData) {
-            return SizedBox(
-              height: 50.0,
-              width: 50.0,
-              child: Container(),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16.0),
+      child: Container(
+        height: 150.0,
+        width: 250.0,
+        child: FutureBuilder(
+          future: cloud.getImagePathInsume(name: "${insumo.id}.jpg"),
+          builder: (BuildContext context, AsyncSnapshot snap) {
+            if (!snap.hasData) {
+              return Center(
+                child: Wrap(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 40.0,
+                      width: 40.0,
+                      child: CircularProgressIndicator(),
+                    ),
+                  ],
+                ),
+              );
+            }
+            return Image.network(
+              snap.data,
+              fit: BoxFit.cover,
             );
-          }
-          return Image.network(snap.data);
-        },
+          },
+        ),
       ),
     );
   }
