@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:inventario_umsa_industrial2019/ui/pages/inventary.dart';
+import 'package:inventario_umsa_industrial2019/ui/pages/register.dart';
+import 'package:inventario_umsa_industrial2019/ui/pages/ventas.dart';
 
 class BodyHome extends StatefulWidget {
   @override
@@ -24,9 +27,9 @@ class _BodyHomeState extends State<BodyHome>
             physics: NeverScrollableScrollPhysics(),
             controller: _tabController,
             children: <Widget>[
-              Container(),
-              Container(),
-              Container(),
+              Inventary(),
+              Register(),
+              Ventas(registro: false,),
             ],
           ),
         ),
